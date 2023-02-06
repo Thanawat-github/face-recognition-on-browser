@@ -26,7 +26,7 @@
         <button id="login" class="button button1" style="margin-left: 30px;"> Log In</button>
         <br><br><br><br>
         <span style="margin-left: 120px; font-size: 30px; font-family:Lucida Console,Monaco,monospace; font-weight: bold;"> Employee Information </span><br></br>
-        <img id="prof_img" style="margin-left: 210px; height:200px; width: 200px; border: 3px solid black; border-radius: 10px;" ></img><br><br>
+        <img id="prof_img" style="margin-left: 210px; height:200px; width: 200px; border: 3px solid black; border-radius: 10px;object-fit:cover;" ></img><br><br>
         
         <div id="reg_disp" style="display: none;">
           <input id="fname" style="margin-left:50px; width:500px; height: 30px; border-radius: 5px; border:1px solid black;" type="text" placeholder="First Name : "></input><br></br>
@@ -37,7 +37,7 @@
 
         <div id="log_disp">
             <br></br>
-            <div id="log_name" style="font-size: 35px; font-weight: bold; margin-left: 40px; width: 570px; white-space: pre-wrap; text-align: center;"></div><br>
+            <div id="log_name" style="font-size: 35px; font-weight: bold; margin-left: 40px; width: 570px; white-space: pre-wrap; text-align: center;object-fit:cover;"></div><br>
             <div style="margin-left: 40px; width: 570px; border: 3px solid black;"></div><br>
         </div>
       </div>
@@ -191,7 +191,6 @@
                 str = str.substring(0, str.indexOf('('))
                 str = str.substring(0, str.length - 1)
                 console.log(rating)
-                console.log(str)
                 if(str != "unknown"){
                   if(rating > 0.5){
                       console.log("Match TRUE!")
@@ -318,7 +317,7 @@
     $("#tries").html("Trials left : " + counter)
 
     $("#capture").click(async function(){
-      var data = $("#lname").val() + "," + $("#fname").val();
+      var data = $("#fname").val() + "," + $("#lname").val();
       const label = data;
 
     if($("#fname").hasClass('active') && $("#lname").hasClass('active') && $("#fname").val() && $("#lname").val()){
